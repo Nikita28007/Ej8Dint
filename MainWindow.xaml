@@ -1,0 +1,20 @@
+﻿<Window x:Class="Ej8Dint.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ej8Dint"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="262.996" Width="366.391">
+    <Grid>
+        <TextBox Tag="1" x:Name="nombreTextBox" HorizontalAlignment="Left" Height="23" Margin="25,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyDown="nomAppTextBox_KeyDown" TextChanged="TextBox_TextChanged"/>
+        <TextBox Tag="2" x:Name="apellidoTextBox" HorizontalAlignment="Left" Height="23" Margin="25,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"  KeyDown="nomAppTextBox_KeyDown"/>
+        <TextBox Tag="3" x:Name="edadTextBox" HorizontalAlignment="Left" Height="23" Margin="25,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"  KeyDown="edadTextBox_KeyDown"/>
+        <TextBlock x:Name="ayudaTextBlock" Tag="t1" HorizontalAlignment="Left" Margin="172,61,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+        <TextBlock x:Name="ayudaApellidoTextBlock" Tag="t2" HorizontalAlignment="Left" Margin="172,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock Tag="t3" HorizontalAlignment="Left" Margin="172,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,37,0,0" TextWrapping="Wrap" Text="Nombre" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,94,0,0" TextWrapping="Wrap" Text="Apellido" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,156,0,0" TextWrapping="Wrap" Text="Edad" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

@@ -33,44 +33,36 @@ namespace Ej8Dint
             TextBlock mensaje = (sender as TextBox).Tag as TextBlock;
             if (e.Key == Key.F1)
             {
-                if (mensaje.IsVisible) mensaje.Visibility = Visibility.Hidden;
+                if (mensaje.IsVisible) 
+                    mensaje.Visibility = Visibility.Hidden;
                 else mensaje.Visibility = Visibility.Visible;
-              
+                ayudaTextBlock.Text = "Nombre del cliente";
+                ayudaApellidoTextBlock.Text = "Apellido del cliente";
+
+            
+                    
             }
         }
 
-        private void nomAppTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void edadTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            TextBox textBox = sender as TextBox;
-            int num;
-            TextBlock textBlock = sender as TextBlock;
-            if (Keyboard.IsKeyDown(Key.F2) || textBox.Tag.Equals("3"))
+            int numero;
+            
+             if (e.Key == Key.F2)
             {
-                if (textBlock.Tag.Equals("t3"))
+                if (!int.TryParse(edadTextBox.Text,out numero))
                 {
-                    if (!int.TryParse(textBox.Text, out num))
-                    {
-                        textBox.Text = "Edad incorecta"; 
-                    }
+                    ayudaEdad.Text = "Edad incorrecta";
+                    ayudaEdad.Visibility = Visibility.Visible;
+                    ayudaEdad.Foreground = Brushes.Red;
+                }
+                else
+                {
+                    ayudaEdad.Visibility = Visibility.Hidden;
                 }
             }
         }
 
-        
-
-
-          
-
-            //comprobar edad - try parse 
-            //si es entero correcto, si no no
-        
-
-        private void edadTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-             if (e.Key == Key.F1)
-            {
-                //si es visble cambiar a visible
-            }
-        }
+     
     }
 }
